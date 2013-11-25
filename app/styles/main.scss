@@ -13,6 +13,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 600px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -28,6 +29,20 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
+.master, .detail {
+  height: 100%;
+}
+
+.mainArea {
+  height: 100%;
+}
+
+textarea.jsonPaste {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
     margin-top: 0;
@@ -38,9 +53,22 @@ body {
 
 /* Custom page footer */
 .footer {
+    margin-top: 19px;
     padding-top: 19px;
     color: #777;
     border-top: 1px solid #e5e5e5;
+}
+
+.editActions {
+  background-color: gray;
+  top: 0px;
+  right: 15px;
+  position: absolute;
+
+  .toView {
+    font-size: 32px;
+    color: green;
+  }
 }
 
 .container-narrow > hr {
@@ -67,10 +95,15 @@ body {
     margin-top: 28px;
 }
 
+pre.jsonViewer {
+  height: 100%;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        width: 100%;
+        height: 100%;
     }
 
     /* Remove the padding we set earlier */
